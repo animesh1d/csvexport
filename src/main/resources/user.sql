@@ -1,0 +1,26 @@
+DROP TABLE IF EXISTS Address;
+
+CREATE TABLE Address (
+  id INT NOT NULL  PRIMARY KEY,
+  street VARCHAR(250) NOT NULL,
+  city VARCHAR(250) NOT NULL,
+  state VARCHAR(250) NOT NULL,
+  postcode VARCHAR(50) NOT NULL
+);
+
+DROP TABLE IF EXISTS Users;
+
+CREATE TABLE Users (
+  id INT NOT NULL,
+  firstname VARCHAR(250) NOT NULL,
+  lastname VARCHAR(250) NOT NULL,
+  empId int NOT NULL,
+  gender CHAR(1) NOT NULL,
+  addressid int NOT NULL,
+  CONSTRAINT user_pk PRIMARY KEY (id),
+  CONSTRAINT FK_ADDRESS_USERS FOREIGN KEY (addressid) REFERENCES Address(id)
+);
+
+CREATE SEQUENCE address_sequence
+START WITH 1
+INCREMENT BY 1

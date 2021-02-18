@@ -1,0 +1,50 @@
+{
+  "provider": {
+    "name": "user_details_provider"
+  },
+  "consumer": {
+    "name": "user_details_consumer"
+  },
+  "interactions": [
+    {
+      "description": "User Details Test",
+      "request": {
+        "method": "GET",
+        "path": "/api/v1/users"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "firstName": "Animesh",
+            "lastName": "Dutta",
+            "empId": 1,
+            "gender": "M",
+            "address": {
+              "street": "Jessie ST",
+              "city": "Sydney",
+              "state": "NSW",
+              "postcode": "2145"
+            }
+          }
+        ]
+      },
+      "providerStates": [
+        {
+          "name": "get user details"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    },
+    "pact-jvm": {
+      "version": "4.0.9"
+    }
+  }
+}
