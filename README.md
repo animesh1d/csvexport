@@ -4,9 +4,8 @@
 2.	Import maven dependencies and setup JDK as required.
 3.	Run below command to start the application
    mvn spring-boot:run
-4.	The server is running at port 8089
-   You can access h2 database at http://localhost:8089/h2/
-   with username: sa and password:sa
+4.	The server is running at port 8089.
+   You can access h2 database at http://localhost:8089/h2/ with username: sa and password:sa
 5.	You can access hystrix dashboard at http://localhost:8089/hystrix/
    Then enter http://localhost:8089/actuator/hystrix.stream at the url location and click Monitor Stream.
 6.	Import the User Details.postman_collection.json to Postman from src\test\resource\postman. 
