@@ -1,16 +1,17 @@
 # Instructions to run the Application
 
 1.	Download the code from github or clone the repository.
-2.	Import maven dependencies and setup JDK as required.
+2.	Import maven dependencies and setup JDK 11 and build the project using mvn clean install.
 3.	Run below command to start the application
-   mvn spring-boot:run
+    mvn spring-boot:run
 4.	The server is running at port 8089.
-   You can access h2 database at http://localhost:8089/h2/ with username: sa and password:sa
+    You can access h2 database at http://localhost:8089/h2/ with username: sa and password:sa
 5.	You can access hystrix dashboard at http://localhost:8089/hystrix/
-   Then enter http://localhost:8089/actuator/hystrix.stream at the url location and click Monitor Stream.
+    Then enter http://localhost:8089/actuator/hystrix.stream at the url location and click Monitor Stream.
 6.	Import the User Details.postman_collection.json to Postman from src\test\resource\postman. 
 7.	Run Authentication Failure end point first to check the authentication service which will provide authentication error details.
-8.	Then run Create Users to add users to h2 database, 5 users added, you can add more if you want.
+8.	Then run Create Users to add users to h2 database, 5 users added, you can add more if you want. Basic authentication is added for all the endpoints Username: user
+    Password: password
 9.	Then you can run Get Users to get the user details.
 10.	Then run Update User to update the user.
 11.	Then run User Id Validation to validate User ID
